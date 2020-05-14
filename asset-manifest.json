@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/event-site-react/static/css/main.8683d2fb.chunk.css",
+    "main.js": "/event-site-react/static/js/main.67cc6b32.chunk.js",
+    "main.js.map": "/event-site-react/static/js/main.67cc6b32.chunk.js.map",
+    "runtime-main.js": "/event-site-react/static/js/runtime-main.84414469.js",
+    "runtime-main.js.map": "/event-site-react/static/js/runtime-main.84414469.js.map",
+    "static/js/2.c88592aa.chunk.js": "/event-site-react/static/js/2.c88592aa.chunk.js",
+    "static/js/2.c88592aa.chunk.js.map": "/event-site-react/static/js/2.c88592aa.chunk.js.map",
+    "index.html": "/event-site-react/index.html",
+    "precache-manifest.4d64ce61f6fdaffc9b1833d8ef6fdf3f.js": "/event-site-react/precache-manifest.4d64ce61f6fdaffc9b1833d8ef6fdf3f.js",
+    "service-worker.js": "/event-site-react/service-worker.js",
+    "static/css/main.8683d2fb.chunk.css.map": "/event-site-react/static/css/main.8683d2fb.chunk.css.map",
+    "static/js/2.c88592aa.chunk.js.LICENSE.txt": "/event-site-react/static/js/2.c88592aa.chunk.js.LICENSE.txt",
+    "static/media/blackLogo.png": "/event-site-react/static/media/blackLogo.ea11f911.png",
+    "static/media/whiteLogo.png": "/event-site-react/static/media/whiteLogo.30565cb8.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.84414469.js",
+    "static/js/2.c88592aa.chunk.js",
+    "static/css/main.8683d2fb.chunk.css",
+    "static/js/main.67cc6b32.chunk.js"
+  ]
+}
