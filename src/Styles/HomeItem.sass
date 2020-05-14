@@ -1,0 +1,80 @@
+@mixin homeItem
+    width: 340px
+    height: 340px
+    font-size: 30px
+    margin: 20px
+    display: flex
+
+    span
+        margin: auto
+
+.homeItems
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    margin-top: 20px
+
+    a
+        text-decoration: none
+
+    .homeLink
+        @include homeItem
+        background: #43d8c9
+        color: #333333
+        cursor: pointer
+
+        &:hover
+            font-weight: bold
+            background: #158a90
+            color: azure
+
+    .homeTitle
+        @include homeItem
+        color: azure
+        background: #333333
+        font-weight: bold
+
+@media (max-width: 1000px)
+    @mixin homeItem
+        width: 200px
+        height: 200px
+        font-size: 30px
+        text-align: center
+
+    .homeItems
+
+        .homeLink
+            @include homeItem
+
+        .homeTitle
+            @include homeItem
+
+@media (max-width: 600px)
+    @mixin homeItem
+        width: 150px
+        height: 150px
+        font-size: 20px
+        text-align: center
+
+    .homeItems
+
+        .homeLink
+            @include homeItem
+
+        .homeTitle
+            @include homeItem
+
+@media (max-width: 400px)
+    @mixin homeItem
+        width: 80px
+        height: 80px
+        font-size: 15px
+        text-align: center
+
+    .homeItems
+
+        .homeLink
+            @include homeItem
+
+        .homeTitle
+            @include homeItem

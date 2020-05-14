@@ -1,0 +1,202 @@
+.headerComponent
+    position: relative
+    height: 504px
+    width: 100vw
+    background-image: URL('https://images7.alphacoders.com/573/thumb-1920-573634.jpg')
+    background-position: 50% 40%
+    display: flex
+
+    .headerBackground
+        background: #01aeffff
+        width: 100%
+        height: 100%
+        opacity: 0.5
+        position: absolute
+        top: 0
+
+    .hamburger
+        padding: 10px
+        cursor: pointer
+        display: inline-block
+        border: 0
+        margin: 0
+        z-index: 10
+        position: fixed
+        background-color: #32AB99
+        transform: translateX(calc(90vw - 100px))
+        top: 20px
+        outline: none
+        transition: transform 0.1s ease-in-out
+
+        .hamburgerBox
+            position: relative
+            width: 35px
+            height: 35px
+            display: inline-block
+            // background-color: red
+
+            .hamburgerInner
+                width: 100%
+                height: 5px
+                background-color: black
+                position: absolute
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+                transition: background-color .1s .1s ease-in-out
+
+            .hamburgerInner::before,
+            .hamburgerInner::after
+                width: 100%
+                height: 5px
+                background-color: black
+                position: absolute
+                left: 0
+                content: ''
+                transition: transform .1s .1s ease-in-out
+
+            .hamburgerInner::before
+                top: -10px
+
+            .hamburgerInner::after
+                top: 10px
+
+.hamburgerActive
+    transform: translateX(88.5vw) !important
+    background-color: transparent !important
+
+    .hamburgerInner
+        background-color: transparent !important
+
+.hamburgerActive .hamburgerInner:before
+    transform: translateY(10px) rotate(45deg)
+
+.hamburgerActive .hamburgerInner:after
+    transform: translateY(-10px) rotate(-45deg)
+
+.hamburgerDisabled:hover .hamburgerInner:before
+    transform: translateY(-5px)
+
+.hamburgerDisabled:hover .hamburgerInner:after
+    transform: translateY(5px)
+
+.sidebar
+    background-color: white
+    position: fixed
+    min-height: 100vh
+    z-index: 5
+    width: 50vw
+    min-width: 500px
+    padding-top: 100px
+    transform: translateX(100vw)
+    transition: transform 0.2s ease-in-out
+    // display: none
+
+    nav
+        height: 400px
+        display: flex
+        color: #333333
+        justify-content: space-around
+
+        a
+            text-decoration: none
+            color: #333333
+
+            &:hover
+                color: #158a90
+
+        ul
+            list-style: none
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+
+        .navList
+            align-items: flex-start
+            padding: 10px
+
+            li
+                padding: 10px
+                font-size: 25px
+
+        .socialList
+            display: flex
+            flex-direction: column
+            justify-content: space-between
+
+            a
+                text-decoration: none
+                color: #333333
+                font-size: 40px
+                text-align: center
+                padding: 10px
+
+                &:hover
+                    color: #158a90
+
+.sidebarActive
+    transform: translateX(50vw) !important
+
+.logo
+    position: absolute
+    z-index: 5 !important
+    height: 40%
+    bottom: 0
+    left: 10%
+
+    img
+        height: 60%
+
+@media (max-width: 1000px)
+    .sidebar
+        width: 300px
+        min-width: 300px
+        transition: transform 0.2s ease-in-out
+
+        nav
+            height: 400px
+            display: flex
+            flex-direction: column
+            color: #333333
+            justify-content: space-around
+
+            a
+                text-decoration: none
+
+            ul
+                list-style: none
+                display: flex
+                justify-content: space-between
+
+            .navList
+                align-items: flex-start
+                flex-direction: column
+                padding: 10px
+
+                li
+                    padding: 10px
+                    font-size: 20px
+
+            .socialList
+                display: flex
+                flex-direction: row
+                justify-content: flex-start
+                flex-wrap: wrap
+
+                li
+                    width: 60px
+                    margin-
+                    a
+                        text-decoration: none
+                        color: #333333
+                        font-size: 35px
+                        text-align: center
+                        padding: 10px
+
+    .sidebarActive
+        transform: translateX(calc(100vw - 300px)) !important
+
+@media (max-width: 600px)
+    .hamburgerActive
+        transform: translateX(80vw) !important
+        background-color: transparent !important

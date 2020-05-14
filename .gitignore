@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# what do do file
+*.md
+
+#yarn lock
+yarn.lock

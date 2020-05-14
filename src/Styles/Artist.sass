@@ -1,0 +1,77 @@
+.artistInfo
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    // border: 5px solid red
+
+    .artistContainer
+        position: relative
+        width: 340px
+        height: 340px
+        margin: 15px
+        // border: 5px solid lawngreen
+        overflow: hidden
+        cursor: pointer
+
+        &:hover
+            h4
+                background-color: #158a90
+                color: azure
+
+        h4
+            position: absolute
+            background-color: #43d8c9
+            bottom: 0
+            padding: 15px
+            left: 0
+
+        img
+            position: absolute
+            width: 150%
+            left: 50%
+            transform: translateX(-50%) translateY(-50%)
+            top: 50%
+
+        &:nth-child(8)
+            // border: 10px solid yellow
+
+            img
+                transform: translateX(-50%) translateY(-30%)
+
+        &:nth-child(9)
+            // border: 10px solid yellow
+
+            img
+                transform: translateX(-40%) translateY(-50%)
+
+        &:nth-child(12)
+            // border: 10px solid yellow
+
+            img
+                transform: translateX(-40%) translateY(-55%)
+
+@media (max-width: 1000px)
+    .artistInfo
+        display: flex
+        justify-content: space-around
+        flex-wrap: wrap
+
+        .artistContainer
+            position: relative
+            width: 200px
+            height: 200px
+            margin: 15px
+            overflow: hidden
+            cursor: pointer
+
+            &:hover
+                h4
+                    background-color: #158a90
+                    color: azure
+
+            h4
+                position: absolute
+                background-color: #43d8c9
+                bottom: 0
+                padding: 5px
+                left: 0

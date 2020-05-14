@@ -1,0 +1,46 @@
+.programmePage
+    display: flex
+    justify-content: space-between
+    margin-top: 20px
+
+    h1, h2
+        text-align: center
+
+    hr
+        border: 2px solid #158a90
+        margin-bottom: 30px
+        width: 80%
+
+    .programmeDay
+        width: 50%
+        margin: 25px
+        padding: 50px
+        background: #43d8c9
+        display: flex
+        flex-direction: column
+
+        .concert
+            max-width: 400px
+            // border: 5px solid red
+
+            &:nth-child(even)
+                color: #000000
+                align-self: flex-end
+                text-align: right
+                padding: 20px 0
+
+            p
+                line-height: 1.5
+
+@media (max-width: 1000px)
+    .programmePage
+        flex-direction: column
+        margin-top: 20px
+
+        .programmeDay
+            width: 100%
+            margin: 0px
+            padding: 25px
+            background: #43d8c9
+            display: flex
+            flex-direction: column

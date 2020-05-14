@@ -1,0 +1,68 @@
+@mixin galleryItem
+    width: 340px
+    height: 340px
+    font-size: 30px
+    margin: 20px
+    display: flex
+
+    span
+        margin: auto
+
+.galleryItems
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    margin-top: 20px
+    padding-bottom: 50px
+    background: #333333
+
+    h1
+        width: 100%
+        color: #43d8c9
+        margin-left: 20px
+
+    .galleryItem
+        @include galleryItem
+        background: #43d8c9
+        color: F333333
+        cursor: pointer
+        display: block
+        text-align: center
+
+        h3
+            margin: 20px
+
+        .imgContainer
+            overflow: hidden
+            height: 70%
+            width: 90%
+            margin: auto
+            margin-top: 15px
+            position: relative
+            img
+                height: 240px
+                position: absolute
+                left: 50%
+                transform: translateX(-50%)
+
+        &:hover
+            font-weight: bold
+            background: #158a90
+            color: azure
+
+@media (max-width: 1000px)
+    @mixin galleryItem
+        width: 270px
+        height: 270px
+
+    .galleryItems
+        .galleryItem
+            @include galleryItem
+            background: #43d8c9
+            color: F333333
+            cursor: pointer
+            display: block
+            text-align: center
+
+            h3
+                margin: 15px
