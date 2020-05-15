@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/event-site-react/static/css/main.355bbde4.chunk.css",
+    "main.css": "/event-site-react/static/css/main.5e8a19e3.chunk.css",
     "main.js": "/event-site-react/static/js/main.7496afae.chunk.js",
     "main.js.map": "/event-site-react/static/js/main.7496afae.chunk.js.map",
     "runtime-main.js": "/event-site-react/static/js/runtime-main.84414469.js",
@@ -8,9 +8,9 @@
     "static/js/2.83828b1d.chunk.js": "/event-site-react/static/js/2.83828b1d.chunk.js",
     "static/js/2.83828b1d.chunk.js.map": "/event-site-react/static/js/2.83828b1d.chunk.js.map",
     "index.html": "/event-site-react/index.html",
-    "precache-manifest.0299093c2136f5fb0b93ec55faed662d.js": "/event-site-react/precache-manifest.0299093c2136f5fb0b93ec55faed662d.js",
+    "precache-manifest.294525bfb8e4171bdf605fe6ec69c734.js": "/event-site-react/precache-manifest.294525bfb8e4171bdf605fe6ec69c734.js",
     "service-worker.js": "/event-site-react/service-worker.js",
-    "static/css/main.355bbde4.chunk.css.map": "/event-site-react/static/css/main.355bbde4.chunk.css.map",
+    "static/css/main.5e8a19e3.chunk.css.map": "/event-site-react/static/css/main.5e8a19e3.chunk.css.map",
     "static/js/2.83828b1d.chunk.js.LICENSE.txt": "/event-site-react/static/js/2.83828b1d.chunk.js.LICENSE.txt",
     "static/media/blackLogo.png": "/event-site-react/static/media/blackLogo.ea11f911.png",
     "static/media/logo1.png": "/event-site-react/static/media/logo1.8c927942.png",
@@ -24,7 +24,7 @@
   "entrypoints": [
     "static/js/runtime-main.84414469.js",
     "static/js/2.83828b1d.chunk.js",
-    "static/css/main.355bbde4.chunk.css",
+    "static/css/main.5e8a19e3.chunk.css",
     "static/js/main.7496afae.chunk.js"
   ]
 }
