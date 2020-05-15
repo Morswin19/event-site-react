@@ -1,14 +1,15 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import '../Styles/Header.sass'
 import blackLogo from '../logo/blackLogo.png'
-import whiteLogo from '../logo/whiteLogo.png'
 import { NavLink } from 'react-router-dom'
 
 class Header extends React.Component {
     state = {
         hamburgerClass: 'hamburger hamburgerDisabled',
-        hamburgerActive: false
+        hamburgerActive: false,
     }
+
+    sidebar = createRef();
 
     handleEscapePress = (e) => {
         if (e.keyCode === 27) {
@@ -20,12 +21,12 @@ class Header extends React.Component {
     }
 
     handleEscapeClick = (e) => {
-        console.log(e.target.className);
-        // if (e.keyCode === 27) {
-        //     this.setState({
-        //         hamburgerClass: 'hamburger hamburgerDisabled',
-        //         hamburgerActive: false
-        //     })
+        if (e.screenX < (window.innerWidth - this.sidebar.current.clientWidth)) {
+            this.setState({
+                hamburgerClass: 'hamburger hamburgerDisabled',
+                hamburgerActive: false
+            })
+        }
     };
 
     handleClick = () => {
@@ -44,7 +45,6 @@ class Header extends React.Component {
         }
     }
 
-
     render() {
 
         return (
@@ -58,8 +58,13 @@ class Header extends React.Component {
                     <img src={blackLogo} alt="" />
                 </div>
                 <div className='headerBackground'></div>
-                <div className={this.state.hamburgerActive ? 'sidebar sidebarActive' : 'sidebar'}>
-                    <nav>
+                <NavLink to='/' exact>
+                    <div className="homeButton">
+                        <i href="#" className="fa fa-home"></i>
+                    </div>
+                </NavLink>
+                <div ref={this.sidebar} className={this.state.hamburgerActive ? 'sidebar sidebarActive' : 'sidebar'}>
+                    <nav className='navigation'>
                         <ul className='navList'>
                             <NavLink to='/' exact><li>Home</li></NavLink>
                             <NavLink to='/programme' exact><li>Programme</li></NavLink>
@@ -70,10 +75,10 @@ class Header extends React.Component {
                             <NavLink to='/staff' exact><li>Staff & Contact</li></NavLink>
                         </ul>
                         <ul className='socialList'>
-                            <li><a href="#" className="fa fa-youtube"></a></li>
-                            <li><a href="#" className="fa fa-facebook"></a></li>
-                            <li><a href="#" className="fa fa-instagram"></a></li>
-                            <li><a href="#" className="fa fa-twitter"></a></li>
+                            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="fa fa-youtube"> </a>
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="fa fa-facebook"> </a>
+                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="fa fa-instagram"> </a>
+                            <a href="https://twitter.com/explore" target="_blank" rel="noopener noreferrer" className="fa fa-twitter"> </a>
                         </ul>
                     </nav>
                 </div>

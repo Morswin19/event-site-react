@@ -4,15 +4,15 @@ import '../Styles/Social.sass'
 const Social = () => {
     return (
         <div className="socialComponent">
-            <div>
-                <a href="#" className="fa fa-facebook"></a>
-            </div>
-            <div>
-                <a href="#" className="fa fa-twitter"></a>
-            </div>
-            <div>
-                <a href="#" className="fa fa-instagram"></a>
-            </div>
+            <button>
+                <i href="#" className="fa fa-facebook"></i>
+            </button>
+            <button>
+                <i href="#" className="fa fa-twitter"></i>
+            </button>
+            <button>
+                <i href="#" className="fa fa-instagram"></i>
+            </button>
         </div>
     );
 }

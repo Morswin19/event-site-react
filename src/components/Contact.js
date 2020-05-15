@@ -6,20 +6,17 @@ const Contact = () => {
         <div className="footerElement contact">
             <h3>CONTACT</h3>
             <ul>
-                <li>Centre for Intercultural Creative Initiatives CROSSROADS</li>
-                <li>Peowiaków 12</li>
-                <li>20-007 Lublin</li>
+                <li>Fiserv Forum Vel PK FESTIVAL</li>
+                <li>Phillips Avenue 12</li>
+                <li>20-007 Boston, MA</li>
             </ul>
             <ul>
-                <li>Tel: + 48(81) 466 61 67</li>
-                <li>Fax: +48 81 466 61 64</li>
-                <li>E - mail: info@kody-festiwal.pl</li>
+                <li>Tel: + 48(98) 466 16 76</li>
+                <li>Fax: +48 98 510 100 100</li>
+                <li>E - mail: info@pk-festiwal.com</li>
             </ul>
         </div>
     );
 }
 
 export default Contact;
-
-
-

@@ -23,12 +23,10 @@ class Staff extends React.Component {
                     users: data
                 })
             })
-        // console.log(this.state.u)
     }
 
     render() {
         let output = '';
-        // if(this.setState )
         if (this.state.facesLinks.length && this.state.users.length) {
             output = this.state.facesLinks.map((face, index) => <StaffPerson
                 key={face.id}
@@ -37,7 +35,6 @@ class Staff extends React.Component {
                 phone={this.state.users[index].phone}
                 email={this.state.users[index].email}
             />);
-            console.log(this.state.users)
         }
         return (
             <div className='staffPage'>
