@@ -45,6 +45,13 @@ class Header extends React.Component {
         }
     }
 
+    // handleNavLinkClick = () => {
+    //     this.setState({
+    //         hamburgerClass: 'hamburger hamburgerDisabled',
+    //         hamburgerActive: false
+    //     })
+    // }
+
     render() {
 
         return (
@@ -66,13 +73,13 @@ class Header extends React.Component {
                 <div ref={this.sidebar} className={this.state.hamburgerActive ? 'sidebar sidebarActive' : 'sidebar'}>
                     <nav className='navigation'>
                         <ul className='navList'>
-                            <NavLink to='/' exact><li>Home</li></NavLink>
-                            <NavLink to='/programme' exact><li>Programme</li></NavLink>
-                            <NavLink to='/about' exact><li>About</li></NavLink>
-                            <NavLink to='/archive' exact><li>Archive</li></NavLink>
-                            <NavLink to='/gallery' exact><li>Gallery</li></NavLink>
-                            <NavLink to='/artists' exact><li>Artists</li></NavLink>
-                            <NavLink to='/staff' exact><li>Staff & Contact</li></NavLink>
+                            <NavLink to='/' onClick={this.handleClick} exact><li>Home</li></NavLink>
+                            <NavLink to='/programme' onClick={this.handleClick} exact><li>Programme</li></NavLink>
+                            <NavLink to='/about' onClick={this.handleClick} exact><li>About</li></NavLink>
+                            <NavLink to='/archive' onClick={this.handleClick} exact><li>Archive</li></NavLink>
+                            <NavLink to='/gallery' onClick={this.handleClick} exact><li>Gallery</li></NavLink>
+                            <NavLink to='/artists' onClick={this.handleClick} exact><li>Artists</li></NavLink>
+                            <NavLink to='/staff' onClick={this.handleClick} exact><li>Staff & Contact</li></NavLink>
                         </ul>
                         <ul className='socialList'>
                             <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="fa fa-youtube"> </a>
