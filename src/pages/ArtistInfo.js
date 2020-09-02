@@ -49,7 +49,7 @@ const ArtistInfo = () => {
                 <h4>Per Un Soccorso</h4>
             </div>
             <div className="artistContainer">
-                <img src="https://cdn.pixabay.com/photo/2019/12/15/03/25/people-4696246_960_720.jpg" alt="" />
+                <img src='https://images.pexels.com/photos/555345/pexels-photo-555345.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260' alt="" />
                 <h4>Uomo di Palepoli</h4>
             </div>
         </div>

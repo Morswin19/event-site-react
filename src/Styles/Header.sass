@@ -1,3 +1,5 @@
+@import "./sass-variables.sass"
+
 .headerComponent
     position: relative
     height: 504px
@@ -6,6 +8,7 @@
     background-size: 75%
     background-position: 180% 30%
     display: flex
+    box-shadow: $smain
 
     // .headerBackground
     //     // background: #04d8ffff
@@ -20,21 +23,23 @@
         display: flex
         width: 50px
         height: 50px
-        background-color: #4DD3C0
+        background-color: $cmain
         justify-content: center
         align-items: center
-        margin: 25px 5px 15px 25px
-        left: calc(10% + 20px)
+        // margin: 25px 5px 15px 25px
+        left: calc(10% + 8px)
+        top: 40px
         z-index: 15
 
         i
             text-decoration: none
-            color: #333333
+            color: $cdark
             font-size: 40px
 
         &:hover
+            // background-color: $chover
             i
-                color: azure
+                color: $clight
 
     .hamburger
         padding: 10px
@@ -44,11 +49,13 @@
         margin: 0
         z-index: 10
         position: fixed
-        background-color: #4DD3C0
+        background-color: $cmain
         transform: translateX(calc(90vw - 100px))
-        top: 20px
+        top: 40px
         outline: none
         transition: transform 0.1s ease-in-out
+        &:hover
+            // background-color: $chover
 
         .hamburgerBox
             position: relative
@@ -56,13 +63,14 @@
             height: 35px
             display: inline-block
 
-            &:hover .hamburgerInner
-                background-color: white
+            &:hover
+                .hamburgerInner
+                    background-color: white
 
             .hamburgerInner
                 width: 100%
                 height: 5px
-                background-color: black
+                background-color: $cdark
                 position: absolute
                 left: 0
                 top: 50%
@@ -105,7 +113,7 @@
     transform: translateY(5px)
 
 .sidebar
-    background-color: white
+    background-color: $clight
     position: fixed
     min-height: 100vh
     z-index: 5
@@ -118,15 +126,15 @@
     nav
         height: 400px
         display: flex
-        color: #333333
+        color: $cdark
         justify-content: space-around
 
         a
             text-decoration: none
-            color: #333333
+            color: $cdark
 
             &:hover
-                color: #158a90
+                color: $chover
 
         ul
             list-style: none
@@ -149,7 +157,7 @@
 
             a
                 text-decoration: none
-                color: #333333
+                color: $cdark
                 font-size: 40px
                 text-align: center
                 padding: 10px
@@ -159,7 +167,7 @@
                 outline: none
 
                 &:hover
-                    color: #158a90
+                    color: $chover
 
 .sidebarActive
     transform: translateX(50vw) !important
@@ -169,7 +177,7 @@
     z-index: 5 !important
     height: 40%
     bottom: 0
-    left: 10%
+    left: calc(10% + 20px)
 
     img
         height: 60%

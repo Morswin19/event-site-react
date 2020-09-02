@@ -1,3 +1,5 @@
+@import "./sass-variables.sass"
+
 @mixin homeItem
     width: 340px
     height: 340px
@@ -19,14 +21,15 @@
 
     .homeLink
         @include homeItem
-        background: #43d8c9
-        color: #333333
+        background: $cmain
+        color: $cdark
         cursor: pointer
+        transition: 0.3s
+        box-shadow: $smain
 
         &:hover
-            font-weight: bold
-            background: #158a90
-            color: azure
+            background: $chover
+            color: $clight
 
     .homeTitle
         @include homeItem

@@ -8,7 +8,7 @@ const Programme = () => {
                 <h1>Programme of 2020 PK festival</h1>
                 <hr />
                 <h2>19 November</h2>
-                <hr style={{ border: '1px solid #158a90' }} />
+                <hr style={{ border: '1px solid #333333' }} />
                 <div className="concert">
                     <span>11:00 - 12:30</span>
                     <h4>Locanda della Museo Rosenbach</h4>
@@ -42,7 +42,7 @@ const Programme = () => {
             </div>
             <div className='programmeDay'>
                 <h2 style={{ paddingTop: '40px' }}>20 November</h2>
-                <hr style={{ border: '1px solid #158a90' }} />
+                <hr style={{ border: '1px solid #333333' }} />
                 <div className="concert">
                     <span>11:00 - 12:30</span>
                     <h4>Locanda della Museo Rosenbach</h4>
