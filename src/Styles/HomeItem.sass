@@ -1,8 +1,8 @@
 @import "./sass-variables.sass"
 
 @mixin homeItem
-    width: 340px
-    height: 340px
+    width: 230px
+    height: 230px
     font-size: 30px
     margin: 20px
     display: flex
@@ -13,7 +13,7 @@
 .homeItems
     display: flex
     flex-wrap: wrap
-    justify-content: space-around
+    justify-content: center
     margin-top: 20px
 
     a
@@ -33,51 +33,75 @@
 
     .homeTitle
         @include homeItem
-        color: azure
-        background: #333333
-        font-weight: bold
-
-@media (max-width: 1000px)
-    @mixin homeItem
-        width: 200px
-        height: 200px
-        font-size: 30px
-        text-align: center
-
-    .homeItems
-
-        .homeLink
-            @include homeItem
-
-        .homeTitle
-            @include homeItem
-
-@media (max-width: 600px)
-    @mixin homeItem
-        width: 150px
-        height: 150px
+        color: $clight
+        background: $cdark
         font-size: 20px
-        text-align: center
 
+@media(max-width: 1200px)
     .homeItems
+        // display: flex
+        // flex-wrap: wrap
+        // justify-content: center
+        // margin-top: 20px
+
+        a
+            // text-decoration: none
 
         .homeLink
-            @include homeItem
+            // @include homeItem
+            // background: $cmain
+            // color: $cdark
+            // cursor: pointer
+            // transition: 0.3s
+            // box-shadow: $smain
+            width: 170px
+            height: 170px
+            font-size: 25px
+
+            &:hover
+                // background: $chover
+                // color: $clight
 
         .homeTitle
             @include homeItem
+            width: 170px
+            height: 170px
+            // color: $clight
+            // background: $cdark
+            font-size: 20px
 
-@media (max-width: 400px)
-    @mixin homeItem
-        width: 80px
-        height: 80px
-        font-size: 15px
-        text-align: center
-
+@media(max-width: 600px)
     .homeItems
+        // display: flex
+        // flex-wrap: wrap
+        // justify-content: center
+        // margin-top: 20px
+
+        a
+            // text-decoration: none
 
         .homeLink
-            @include homeItem
+            // @include homeItem
+            // background: $cmain
+            // color: $cdark
+            // cursor: pointer
+            // transition: 0.3s
+            // box-shadow: $smain
+            width: 120px
+            height: 120px
+            font-size: 20px
+            margin: 10px
+
+            &:hover
+                // background: $chover
+                // color: $clight
 
         .homeTitle
-            @include homeItem
+            // @include homeItem
+            width: 120px
+            height: 120px
+            text-align: center
+            // // color: $clight
+            // // background: $cdark
+            font-size: 15px
+            margin: 10px
