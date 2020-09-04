@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/event-site-react/static/css/main.305bc77b.chunk.css",
-    "main.js": "/event-site-react/static/js/main.85253400.chunk.js",
-    "main.js.map": "/event-site-react/static/js/main.85253400.chunk.js.map",
+    "main.css": "/event-site-react/static/css/main.af5a1e8d.chunk.css",
+    "main.js": "/event-site-react/static/js/main.597026a5.chunk.js",
+    "main.js.map": "/event-site-react/static/js/main.597026a5.chunk.js.map",
     "runtime-main.js": "/event-site-react/static/js/runtime-main.84414469.js",
     "runtime-main.js.map": "/event-site-react/static/js/runtime-main.84414469.js.map",
-    "static/js/2.1392a8ac.chunk.js": "/event-site-react/static/js/2.1392a8ac.chunk.js",
-    "static/js/2.1392a8ac.chunk.js.map": "/event-site-react/static/js/2.1392a8ac.chunk.js.map",
+    "static/js/2.d8449dd0.chunk.js": "/event-site-react/static/js/2.d8449dd0.chunk.js",
+    "static/js/2.d8449dd0.chunk.js.map": "/event-site-react/static/js/2.d8449dd0.chunk.js.map",
     "index.html": "/event-site-react/index.html",
-    "precache-manifest.8bb628a8fcbb8668c009946b5063f273.js": "/event-site-react/precache-manifest.8bb628a8fcbb8668c009946b5063f273.js",
+    "precache-manifest.da681776302e5ddff82ff50dbcb26a16.js": "/event-site-react/precache-manifest.da681776302e5ddff82ff50dbcb26a16.js",
     "service-worker.js": "/event-site-react/service-worker.js",
-    "static/css/main.305bc77b.chunk.css.map": "/event-site-react/static/css/main.305bc77b.chunk.css.map",
-    "static/js/2.1392a8ac.chunk.js.LICENSE.txt": "/event-site-react/static/js/2.1392a8ac.chunk.js.LICENSE.txt",
+    "static/css/main.af5a1e8d.chunk.css.map": "/event-site-react/static/css/main.af5a1e8d.chunk.css.map",
+    "static/js/2.d8449dd0.chunk.js.LICENSE.txt": "/event-site-react/static/js/2.d8449dd0.chunk.js.LICENSE.txt",
     "static/media/blackLogo.png": "/event-site-react/static/media/blackLogo.ea11f911.png",
     "static/media/logo1.png": "/event-site-react/static/media/logo1.8c927942.png",
     "static/media/logo2.png": "/event-site-react/static/media/logo2.caa3c5b9.png",
@@ -23,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.84414469.js",
-    "static/js/2.1392a8ac.chunk.js",
-    "static/css/main.305bc77b.chunk.css",
-    "static/js/main.85253400.chunk.js"
+    "static/js/2.d8449dd0.chunk.js",
+    "static/css/main.af5a1e8d.chunk.css",
+    "static/js/main.597026a5.chunk.js"
   ]
 }
