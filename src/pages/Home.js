@@ -12,7 +12,7 @@ class Home extends React.Component {
                 <div className='homeItems'>
                     <HomeItem name='XIX PK Festival' class='homeTitle' />
                     <Link to="/archive">
-                        <HomeItem name='Archive' class='homeLink' />
+                        <HomeItem name='History' class='homeLink' />
                     </Link>
                     <Link to="/programme">
                         <HomeItem name='Programme' class='homeLink' />

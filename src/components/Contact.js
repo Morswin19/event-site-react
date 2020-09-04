@@ -13,7 +13,7 @@ const Contact = () => {
             <ul>
                 <li>Tel: + 48(98) 466 16 76</li>
                 <li>Fax: +48 98 510 100 100</li>
-                <li>E - mail: info@pk-festiwal.com</li>
+                <li>E-mail: info@pk_festiwal.com</li>
             </ul>
         </div>
     );

@@ -22,7 +22,7 @@
         flex-direction: column
         color: F333333
         text-align: center
-        color: #158a90
+        color: $cdark
 
         h4
             font-size: 20px
@@ -39,3 +39,41 @@
             border-top-left-radius: 50%
             border-bottom-right-radius: 50%
             box-shadow: $ssecond, $sthird
+
+@media(max-width: 900px)
+    .staffPage
+        width: 100%
+        margin: auto
+        margin-top: 45px
+        display: flex
+        flex-wrap: wrap
+        justify-content: space-around
+
+        .personItem
+            @include staffItem
+            display: flex
+            width: 23%
+            width: 250px
+            height: 300px
+            min-width: 250px
+            flex-direction: column
+            color: F333333
+            text-align: center
+            color: $cdark
+
+            h4
+                font-size: 15px
+                margin: 10px
+
+            p
+                font-size: 15px
+                margin: 5px
+
+            img
+                margin: 20px auto 10px
+                width: 150px
+                height: auto
+                border-top-left-radius: 50%
+                border-bottom-right-radius: 50%
+                box-shadow: $ssecond, $sthird
+                border-color: rgba(0,0,0,0)

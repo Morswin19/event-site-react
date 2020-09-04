@@ -490,7 +490,186 @@
             .socialList
                 // display: flex
                 // flex-direction: column
+                justify-content: flex-start
+                width: 80%
+                padding: 0px
+
+                a
+                    // text-decoration: none
+                    // color: $cdark
+                    font-size: 30px
+                    // text-align: center
+                    // padding: 10px
+                    // background-color: transparent
+                    // cursor: pointer
+                    // border: none
+                    // outline: none
+                    margin-top: 30px
+
+                    &:hover
+                        // color: $chover
+
+    .sidebarActive
+        // transform: translateX(50vw) !important
+
+    .logo
+        // position: absolute
+        // z-index: 5 !important
+        height: 30%
+        // bottom: 0
+        // left: calc(10% + 20px)
+
+        img
+            // height: 60%
+
+@media(max-width: 600px)
+    .headerComponent
+        // position: relative
+        // height: 504px
+        // width: 100vw
+        // background-image: URL('https://cdn.pixabay.com/photo/2018/12/21/20/17/music-3888684_960_720.png')
+        background-size: auto 500px
+        background-position: 150px 3px
+        // display: flex
+        // box-shadow: $smain
+
+        .homeButton
+            // position: fixed
+            // display: flex
+            // width: 50px
+            // height: 50px
+            // background-color: $cmain
+            // justify-content: center
+            // align-items: center
+            // left: calc(10vw + 20px)
+            top: 35px
+            // z-index: 15
+
+            i
+                // text-decoration: none
+                // color: $cdark
+                // font-size: 40px
+
+            &:hover
+                i
+                    // color: $clight
+
+        .hamburger
+            // padding: 10px
+            // cursor: pointer
+            // display: inline-block
+            // border: 0
+            // margin: 0
+            // z-index: 10
+            // position: fixed
+            // background-color: $cmain
+            transform: translateX(calc(90vw - 80px))
+            // top: 30px
+            // outline: none
+            // transition: transform 0.1s ease-in-out
+            &:hover
+
+            .hamburgerBox
+                // position: relative
+                // width: 35px
+                // height: 35px
+                // display: inline-block
+
+                &:hover
+                    .hamburgerInner
+                        // background-color: white
+
+                .hamburgerInner
+                    // width: 100%
+                    // height: 5px
+                    // background-color: $cdark
+                    // position: absolute
+                    // left: 0
+                    // top: 50%
+                    // transform: translateY(-50%)
+                    // transition: background-color .1s .1s ease-in-out
+
+                .hamburgerInner::before,
+                .hamburgerInner::after
+                    // width: 100%
+                    // height: 5px
+                    // background-color: black
+                    // position: absolute
+                    // left: 0
+                    // content: ''
+                    // transition: transform .1s .1s ease-in-out
+
+                .hamburgerInner::before
+                    // top: -10px
+
+                .hamburgerInner::after
+                    // top: 10px
+
+    .hamburgerActive
+        transform: translateX(80.5vw) !important
+        // background-color: transparent !important
+
+        .hamburgerInner
+            // background-color: transparent !important
+
+    .hamburgerActive .hamburgerInner:before
+        // transform: translateY(10px) rotate(45deg)
+
+    .hamburgerActive .hamburgerInner:after
+        // transform: translateY(-10px) rotate(-45deg)
+
+    .hamburgerDisabled:hover .hamburgerInner:before
+        // transform: translateY(-5px)
+
+    .hamburgerDisabled:hover .hamburgerInner:after
+        // transform: translateY(5px)
+
+    .sidebar
+        // background-color: $clight
+        // position: fixed
+        // min-height: 100vh
+        // z-index: 5
+        // width: 50vw
+        min-width: 100px
+        // padding-top: 100px
+        // transform: translateX(100vw)
+        // transition: transform 0.2s ease-in-out
+
+        nav
+            // height: 400px
+            // display: flex
+            flex-direction: column
+            // color: $cdark
+            justify-content: center
+
+            a
+                // text-decoration: none
+                // color: $cdark
+
+                &:hover
+                    // color: $chover
+
+            ul
+                margin-top:
+                // list-style: none
+                // display: flex
+                // flex-direction: column
                 // justify-content: space-between
+
+            .navList
+                // align-items: flex-start
+                // padding: 10px
+
+                li
+                    // padding: 10px
+                    font-size: 16px
+
+            .socialList
+                // display: flex
+                // flex-direction: column
+                flex-direction: row
+                flex-wrap: wrap
+                justify-content: space-around
                 padding: 0px
 
                 a
@@ -513,7 +692,7 @@
     .logo
         // position: absolute
         // z-index: 5 !important
-        height: 30%
+        height: 20%
         // bottom: 0
         // left: calc(10% + 20px)
 

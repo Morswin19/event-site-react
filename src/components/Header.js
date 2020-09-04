@@ -76,7 +76,7 @@ class Header extends React.Component {
                             <NavLink to='/' onClick={this.handleClick} exact><li>Home</li></NavLink>
                             <NavLink to='/programme' onClick={this.handleClick} exact><li>Programme</li></NavLink>
                             <NavLink to='/about' onClick={this.handleClick} exact><li>About</li></NavLink>
-                            <NavLink to='/archive' onClick={this.handleClick} exact><li>Archive</li></NavLink>
+                            <NavLink to='/archive' onClick={this.handleClick} exact><li>History</li></NavLink>
                             <NavLink to='/gallery' onClick={this.handleClick} exact><li>Gallery</li></NavLink>
                             <NavLink to='/artists' onClick={this.handleClick} exact><li>Artists</li></NavLink>
                             <NavLink to='/staff' onClick={this.handleClick} exact><li>Staff & Contact</li></NavLink>

@@ -38,8 +38,8 @@ const Media = () => {
                 <img src={logo7} alt="" />
                 <img src={logo1} alt="" />
                 <img src={logo2} alt="" />
-                {/* <img src={logo3} alt="" /> */}
-                {/* <img src={logo4} alt="" /> */}
+                <img src={logo3} alt="" />
+                <img src={logo4} alt="" />
             </div>
         </div>
     );
