@@ -57,8 +57,6 @@
             display: inline-block
 
             &:hover
-                .hamburgerInner
-                    background-color: white
 
             .hamburgerInner
                 width: 100%
@@ -69,9 +67,20 @@
                 top: 50%
                 transform: translateY(-50%)
                 transition: background-color .1s .1s ease-in-out
+            .hamburgerInnerHover
+                width: 100%
+                height: 5px
+                background-color: $clight
+                position: absolute
+                left: 0
+                top: 50%
+                transform: translateY(-50%)
+                transition: background-color .1s .1s ease-in-out
 
             .hamburgerInner::before,
-            .hamburgerInner::after
+            .hamburgerInner::after,
+            .hamburgerInnerHover::before,
+            .hamburgerInnerHover::after
                 width: 100%
                 height: 5px
                 background-color: black
@@ -80,10 +89,12 @@
                 content: ''
                 transition: transform .1s .1s ease-in-out
 
-            .hamburgerInner::before
+            .hamburgerInner::before,
+            .hamburgerInnerHover::before
                 top: -10px
 
-            .hamburgerInner::after
+            .hamburgerInner::after,
+            .hamburgerInnerHover::after
                 top: 10px
 
 .hamburgerActive
@@ -99,11 +110,19 @@
 .hamburgerActive .hamburgerInner:after
     transform: translateY(-10px) rotate(-45deg)
 
-.hamburgerDisabled:hover .hamburgerInner:before
-    transform: translateY(-5px)
+.hamburgerDisabledHover
+    .hamburgerInner
+        background-color: white
+    .hamburgerInner:before,
+    .hamburgerInnerHover:before
+        transform: translateY(-5px)
+    .hamburgerInner:after,
+    .hamburgerInnerHover:after
+        transform: translateY(5px)
 
-.hamburgerDisabled:hover .hamburgerInner:after
-    transform: translateY(5px)
+// .hamburgerDisabledHover
+//     .hamburgerInner
+//         background-color: white
 
 .sidebar
     background-color: $clight

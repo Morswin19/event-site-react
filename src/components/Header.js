@@ -29,8 +29,8 @@ class Header extends React.Component {
         }
     };
 
-    handleClick = () => {
-        if (this.state.hamburgerClass === 'hamburger hamburgerDisabled') {
+    handleClick = (a) => {
+        if (this.state.hamburgerClass !== 'hamburger hamburgerActive') {
             document.addEventListener('keydown', (e) => this.handleEscapePress(e));
             document.addEventListener('click', (e) => this.handleEscapeClick(e));
             this.setState({
@@ -42,7 +42,23 @@ class Header extends React.Component {
                 hamburgerClass: 'hamburger hamburgerDisabled',
                 hamburgerActive: !this.state.hamburgerActive
             })
-            window.scrollTo(0, 0);
+            a !== 0 && window.scrollTo(0, 0);
+        }
+    }
+
+    handleHamburgerHover = () => {
+        if (this.state.hamburgerClass === 'hamburger hamburgerDisabled') {
+            this.setState({
+                hamburgerClass: 'hamburger hamburgerDisabled hamburgerDisabledHover'
+            })
+        }
+    }
+
+    handleHamburgerMouseLeave = () => {
+        if (this.state.hamburgerClass === 'hamburger hamburgerDisabled hamburgerDisabledHover') {
+            this.setState({
+                hamburgerClass: 'hamburger hamburgerDisabled'
+            })
         }
     }
 
@@ -53,15 +69,21 @@ class Header extends React.Component {
     //     })
     // }
 
+    // hamburgerHoverFunc
+
+    // componentDidMount(e) {
+    //     window.addEventListener('mouseover', (e) => console.log(e.target))
+    // }
+
     render() {
 
         return (
             <div className='headerComponent' >
-                <button onClick={this.handleClick} className={this.state.hamburgerClass}>
+                <div onClick={() => this.handleClick(0)} className={this.state.hamburgerClass} onMouseEnter={this.handleHamburgerHover} onMouseLeave={this.handleHamburgerMouseLeave}>
                     <span className="hamburgerBox">
-                        <span className="hamburgerInner"></span>
+                        <span className={this.state.hamburgerClass === 'hamburger hamburgerDisabled hamburgerDisabledHover' ? 'hamburgerInnerHover' : 'hamburgerInner'}></span>
                     </span>
-                </button>
+                </div>
                 <div className="logo">
                     <img src={blackLogo} alt="" />
                 </div>
@@ -83,14 +105,14 @@ class Header extends React.Component {
                             <NavLink to='/staff' onClick={this.handleClick} exact><li>Staff & Contact</li></NavLink>
                         </ul>
                         <ul className='socialList'>
-                            <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="fa fa-youtube"> </a>
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="fa fa-facebook"> </a>
-                            <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="fa fa-instagram"> </a>
-                            <a href="https://twitter.com/explore" target="_blank" rel="noopener noreferrer" className="fa fa-twitter"> </a>
+                            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer" className="fa fa-youtube"> </a></li>
+                            <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="fa fa-facebook"> </a></li>
+                            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" className="fa fa-instagram"> </a></li>
+                            <li><a href="https://twitter.com/explore" target="_blank" rel="noopener noreferrer" className="fa fa-twitter"> </a></li>
                         </ul>
                     </nav>
                 </div>
-            </div>
+            </div >
 
         );
     }
