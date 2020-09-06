@@ -8,15 +8,20 @@
         display: flex
         width: 40px
         height: 40px
-        background-color: $cmain
+        background: $cmain
         justify-content: center
         align-items: center
         margin: 25px 5px 0px 25px
         border: none
         cursor: pointer
         outline: none
+        transition: 0.3s
+        &:hover
+            background: $cdark
+            i
+                color: $cmain
 
-    i
-        text-decoration: none
-        color: $cdark
-        font-size: 30px
+        i
+            text-decoration: none
+            color: $cdark
+            font-size: 30px

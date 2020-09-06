@@ -6,14 +6,14 @@ const Contact = () => {
         <div className="footerElement contact">
             <h3>CONTACT</h3>
             <ul>
-                <li>Fiserv Forum Vel PK FESTIVAL</li>
+                <li>PK FESTIVAL</li>
                 <li>Phillips Avenue 12</li>
                 <li>20-007 Boston, MA</li>
             </ul>
             <ul>
-                <li>Tel: + 48(98) 466 16 76</li>
+                <li>Tel: +48 508 832 713</li>
                 <li>Fax: +48 98 510 100 100</li>
-                <li>E-mail: info@pk_festiwal.com</li>
+                <li>E-mail: <a href="mailto:piotr.kalman85@gmail.com">piotr.kalman85@gmail.com</a></li>
             </ul>
         </div>
     );

@@ -24,18 +24,20 @@
         background: $cmain
         color: $cdark
         cursor: pointer
-        transition: 0.3s
+        transition: 1s
         box-shadow: $smain
 
         &:hover
-            background: $chover
-            color: $clight
+            background: $cdarkgradient
+            color: $cmain
+            // box-shadow: $ssecond
 
     .homeTitle
         @include homeItem
         color: $clight
-        background: $cdark
+        background: $cdarkgradient
         font-size: 20px
+        // box-shadow: $smain
 
 @media(max-width: 1200px)
     .homeItems

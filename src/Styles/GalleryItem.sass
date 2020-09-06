@@ -14,9 +14,10 @@
     display: flex
     flex-wrap: wrap
     justify-content: space-around
-    margin-top: 40px
+    margin-top: 65px
+    margin-bottom: 25px
     padding-bottom: 50px
-    background: $cdark
+    background: $cdarkgradient
     box-shadow: $smain
     transition: 0.3s
 
@@ -32,6 +33,7 @@
         cursor: pointer
         display: block
         text-align: center
+        transition: 0.3s
 
         h3
             margin: 20px
@@ -52,8 +54,8 @@
 
         &:hover
             font-weight: bold
-            background: orange
-            color: $clight
+            background: $cdarkgradient2
+            color: $cmain
 
 @media (max-width: 1000px)
     @mixin galleryItem

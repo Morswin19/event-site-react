@@ -10,7 +10,7 @@ function App() {
     <HashRouter basename={process.env.PUBLIC_URL}>
       <div className="App">
         <Header />
-        <div className="mainContainer">
+        <div id="mainContainer" className="mainContainer">
           <Page />
           <Footer />
         </div>

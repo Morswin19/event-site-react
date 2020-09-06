@@ -42,6 +42,7 @@ class Header extends React.Component {
                 hamburgerClass: 'hamburger hamburgerDisabled',
                 hamburgerActive: !this.state.hamburgerActive
             })
+            window.scrollTo(0, 0);
         }
     }
 
@@ -66,7 +67,7 @@ class Header extends React.Component {
                 </div>
                 <div className='headerBackground'></div>
                 <NavLink to='/' exact>
-                    <div className="homeButton">
+                    <div className="homeButton" onClick={() => window.scrollTo(0, 0)}>
                         <i href="#" className="fa fa-home"></i>
                     </div>
                 </NavLink>

@@ -22,6 +22,7 @@
         left: calc(10vw + 20px)
         top: 40px
         z-index: 15
+        transition: 0.3s
 
         i
             text-decoration: none
@@ -29,9 +30,9 @@
             font-size: 40px
 
         &:hover
-            // background-color: $chover
+            background-color: $cdark
             i
-                color: $clight
+                color: $cmain
 
     .hamburger
         padding: 10px
@@ -124,9 +125,12 @@
         a
             text-decoration: none
             color: $cdark
+            transition: 0.2s
 
             &:hover
-                color: $chover
+                color: $cmain
+                // text-shadow: .5px .5px $cdark
+                transform: translateX(20px)
 
         ul
             list-style: none
@@ -157,9 +161,21 @@
                 cursor: pointer
                 border: none
                 outline: none
-
+                transform: rotate(0deg)
+            a:first-child
                 &:hover
-                    color: $chover
+                    color: #FF0000
+                    // transform: rotate(360deg)
+                    // text-shadow: .2px .2px $cdark
+            a:nth-child(2)
+                &:hover
+                    color: #4267B2
+            a:nth-child(3)
+                &:hover
+                    color: #833AB4
+            a:nth-child(4)
+                &:hover
+                    color: #1DA1F2
 
 .sidebarActive
     transform: translateX(50vw) !important
