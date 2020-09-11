@@ -7,98 +7,113 @@
     background-image: URL('https://cdn.pixabay.com/photo/2018/12/21/20/17/music-3888684_960_720.png')
     background-size: 75%
     background-position: 180% 30%
-    display: flex
+    // display: flex
     box-shadow: $smain
+    #headerContainer
+        position: relative
+        // height: 504px
+        width: 1100px
+        margin: auto
+        // border: 5px solid red
+        z-index: 6
+        #homeHamburger
+            position: fixed
+            top: 20px
+            display: flex
+            justify-content: space-between
+            // padding: 0 20px
+            margin: 0 0 0 20px
+            width: 1060px
+            z-index: 15
+            a
+                text-decoration: none
+            .homeButton
+                display: flex
+                justify-content: center
+                align-items: center
+                width: 50px
+                height: 50px
+                background-color: $cmain
+                z-index: 15
+                transition: 0.3s
+                .fa
+                    color: $cdark
+                    font-size: 40px
 
-    .homeButton
-        position: fixed
-        display: flex
-        width: 50px
-        height: 50px
-        background-color: $cmain
-        justify-content: center
-        align-items: center
-        // margin: 25px 5px 15px 25px
-        left: calc(10vw + 20px)
-        top: 40px
-        z-index: 15
-        transition: 0.3s
+                &:hover
+                    background-color: $cdark
+                    i
+                        color: $cmain
 
-        i
-            text-decoration: none
-            color: $cdark
-            font-size: 40px
+            .hamburger
+                // position: fixed
+                width: 50px
+                height: 50px
+                padding: 10px
+                cursor: pointer
+                display: flex
+                border: 0
+                margin: 0
+                z-index: 10
+                background-color: $cmain
+                top: 30px
+                // right: 0px
+                outline: none
+                transition: transform 0.1s ease-in-out
+                &:hover
+                    // background-color: $chover
 
-        &:hover
-            background-color: $cdark
-            i
-                color: $cmain
+                .hamburgerBox
+                    position: relative
+                    width: 35px
+                    height: 35px
+                    display: inline-block
+                    padding-top: 0px
+                    padding-bottom: 0px
 
-    .hamburger
-        padding: 10px
-        cursor: pointer
-        display: inline-block
-        border: 0
-        margin: 0
-        z-index: 10
-        position: fixed
-        background-color: $cmain
-        transform: translateX(calc(90vw - 80px))
-        top: 30px
-        outline: none
-        transition: transform 0.1s ease-in-out
-        &:hover
-            // background-color: $chover
+                    &:hover
 
-        .hamburgerBox
-            position: relative
-            width: 35px
-            height: 35px
-            display: inline-block
+                    .hamburgerInner
+                        width: 100%
+                        height: 5px
+                        background-color: $cdark
+                        position: absolute
+                        left: 0
+                        top: 50%
+                        transform: translateY(-50%)
+                        transition: background-color .1s .1s ease-in-out
+                    .hamburgerInnerHover
+                        width: 100%
+                        height: 5px
+                        background-color: $clight
+                        position: absolute
+                        left: 0
+                        top: 50%
+                        transform: translateY(-50%)
+                        transition: background-color .1s .1s ease-in-out
 
-            &:hover
+                    .hamburgerInner::before,
+                    .hamburgerInner::after,
+                    .hamburgerInnerHover::before,
+                    .hamburgerInnerHover::after
+                        width: 100%
+                        height: 5px
+                        background-color: black
+                        position: absolute
+                        left: 0
+                        content: ''
+                        transition: transform .1s .1s ease-in-out
 
-            .hamburgerInner
-                width: 100%
-                height: 5px
-                background-color: $cdark
-                position: absolute
-                left: 0
-                top: 50%
-                transform: translateY(-50%)
-                transition: background-color .1s .1s ease-in-out
-            .hamburgerInnerHover
-                width: 100%
-                height: 5px
-                background-color: $clight
-                position: absolute
-                left: 0
-                top: 50%
-                transform: translateY(-50%)
-                transition: background-color .1s .1s ease-in-out
+                    .hamburgerInner::before,
+                    .hamburgerInnerHover::before
+                        top: -10px
 
-            .hamburgerInner::before,
-            .hamburgerInner::after,
-            .hamburgerInnerHover::before,
-            .hamburgerInnerHover::after
-                width: 100%
-                height: 5px
-                background-color: black
-                position: absolute
-                left: 0
-                content: ''
-                transition: transform .1s .1s ease-in-out
-
-            .hamburgerInner::before,
-            .hamburgerInnerHover::before
-                top: -10px
-
-            .hamburgerInner::after,
-            .hamburgerInnerHover::after
-                top: 10px
+                    .hamburgerInner::after,
+                    .hamburgerInnerHover::after
+                        top: 10px
 
 .hamburgerActive
-    transform: translateX(88.5vw) !important
+    transform: translateX(0) !important
     background-color: transparent !important
 
     .hamburgerInner
@@ -123,17 +138,30 @@
 // .hamburgerDisabledHover
 //     .hamburgerInner
 //         background-color: white
+.logo
+    position: absolute
+    top: 300px
+    left: 20px
+    z-index: 3 !important
+    height: 200px
+    width: 300px
+        // margin: auto
+        // tramsform: translateX(-50%)
+
+    img
+        height: 60%
 
 .sidebar
     background-color: $clight
     position: fixed
-    min-height: 100vh
+    min-height: 200vh
     z-index: 5
     width: 50vw
     min-width: 500px
     padding-top: 100px
     transform: translateX(100vw)
     transition: transform 0.2s ease-in-out
+    top: 0px
 
     nav
         height: 400px
@@ -181,33 +209,25 @@
                 border: none
                 outline: none
                 transform: rotate(0deg)
-            a:first-child
-                &:hover
-                    color: #FF0000
-                    // transform: rotate(360deg)
-                    // text-shadow: .2px .2px $cdark
-            a:nth-child(2)
-                &:hover
-                    color: #4267B2
-            a:nth-child(3)
-                &:hover
-                    color: #833AB4
-            a:nth-child(4)
-                &:hover
-                    color: #1DA1F2
+            li:first-child
+                a
+                    &:hover
+                        color: #FF0000
+            li:nth-child(2)
+                a
+                    &:hover
+                        color: #4267B2
+            li:nth-child(3)
+                a
+                    &:hover
+                        color: #833AB4
+            li:nth-child(4)
+                a
+                    &:hover
+                        color: #1DA1F2
 
 .sidebarActive
     transform: translateX(50vw) !important
-
-.logo
-    position: absolute
-    z-index: 5 !important
-    height: 40%
-    bottom: 0
-    left: calc(10% + 20px)
-
-    img
-        height: 60%
 
 @media(max-width: 1200px)
     .headerComponent
@@ -219,78 +239,81 @@
         background-position: 440px 30%
         // display: flex
         // box-shadow: $smain
+        #headerContainer
+            width: 850px
+            #homeHamburger
+                width: 810px
+                .homeButton
+                    // position: fixed
+                    // display: flex
+                    // width: 50px
+                    // height: 50px
+                    // background-color: $cmain
+                    // justify-content: center
+                    // align-items: center
+                    // left: calc(10vw + 20px)
+                    // top: 40px
+                    // z-index: 15
 
-        .homeButton
-            // position: fixed
-            // display: flex
-            // width: 50px
-            // height: 50px
-            // background-color: $cmain
-            // justify-content: center
-            // align-items: center
-            // left: calc(10vw + 20px)
-            // top: 40px
-            // z-index: 15
+                    i
+                        // text-decoration: none
+                        // color: $cdark
+                        // font-size: 40px
 
-            i
-                // text-decoration: none
-                // color: $cdark
-                // font-size: 40px
+                    &:hover
+                        i
+                            // color: $clight
 
-            &:hover
-                i
-                    // color: $clight
+                .hamburger
+                    // padding: 10px
+                    // cursor: pointer
+                    // display: inline-block
+                    // border: 0
+                    // margin: 0
+                    // z-index: 10
+                    // position: fixed
+                    // background-color: $cmain
+                    // transform: translateX(calc(90vw - 80px))
+                    // top: 30px
+                    // outline: none
+                    // transition: transform 0.1s ease-in-out
+                    &:hover
 
-        .hamburger
-            // padding: 10px
-            // cursor: pointer
-            // display: inline-block
-            // border: 0
-            // margin: 0
-            // z-index: 10
-            // position: fixed
-            // background-color: $cmain
-            // transform: translateX(calc(90vw - 80px))
-            // top: 30px
-            // outline: none
-            // transition: transform 0.1s ease-in-out
-            &:hover
+                    .hamburgerBox
+                        // position: relative
+                        // width: 35px
+                        // height: 35px
+                        // display: inline-block
 
-            .hamburgerBox
-                // position: relative
-                // width: 35px
-                // height: 35px
-                // display: inline-block
+                        &:hover
+                            .hamburgerInner
+                                // background-color: white
 
-                &:hover
-                    .hamburgerInner
-                        // background-color: white
+                        .hamburgerInner
+                            // width: 100%
+                            // height: 5px
+                            // background-color: $cdark
+                            // position: absolute
+                            // left: 0
+                            // top: 50%
+                            // transform: translateY(-50%)
+                            // transition: background-color .1s .1s ease-in-out
 
-                .hamburgerInner
-                    // width: 100%
-                    // height: 5px
-                    // background-color: $cdark
-                    // position: absolute
-                    // left: 0
-                    // top: 50%
-                    // transform: translateY(-50%)
-                    // transition: background-color .1s .1s ease-in-out
+                        .hamburgerInner::before,
+                        .hamburgerInner::after
+                            // width: 100%
+                            // height: 5px
+                            // background-color: black
+                            // position: absolute
+                            // left: 0
+                            // content: ''
+                            // transition: transform .1s .1s ease-in-out
 
-                .hamburgerInner::before,
-                .hamburgerInner::after
-                    // width: 100%
-                    // height: 5px
-                    // background-color: black
-                    // position: absolute
-                    // left: 0
-                    // content: ''
-                    // transition: transform .1s .1s ease-in-out
+                        .hamburgerInner::before
+                            // top: -10px
 
-                .hamburgerInner::before
-                    // top: -10px
-
-                .hamburgerInner::after
-                    // top: 10px
+                        .hamburgerInner::after
+                            // top: 10px
 
     .hamburgerActive
         // transform: translateX(88.5vw) !important
@@ -374,10 +397,11 @@
 
     .logo
         // position: absolute
-        // z-index: 5 !important
-        // height: 40%
-        // bottom: 0
-        // left: calc(10% + 20px)
+        // top: 300px
+        // left: 20px
+        // z-index: 3 !important
+        // height: 200px
+        // width: 300px
 
         img
             // height: 60%
@@ -392,78 +416,81 @@
         background-position: 240px 30%
         // display: flex
         // box-shadow: $smain
+        #headerContainer
+            width: 550px
+            #homeHamburger
+                width: 510px
+                .homeButton
+                    // position: fixed
+                    // display: flex
+                    // width: 50px
+                    // height: 50px
+                    // background-color: $cmain
+                    // justify-content: center
+                    // align-items: center
+                    // left: calc(10vw + 20px)
+                    // top: 40px
+                    // z-index: 15
 
-        .homeButton
-            // position: fixed
-            // display: flex
-            // width: 50px
-            // height: 50px
-            // background-color: $cmain
-            // justify-content: center
-            // align-items: center
-            // left: calc(10vw + 20px)
-            // top: 40px
-            // z-index: 15
+                    i
+                        // text-decoration: none
+                        // color: $cdark
+                        // font-size: 40px
 
-            i
-                // text-decoration: none
-                // color: $cdark
-                // font-size: 40px
+                    &:hover
+                        i
+                            // color: $clight
 
-            &:hover
-                i
-                    // color: $clight
+                .hamburger
+                    // padding: 10px
+                    // cursor: pointer
+                    // display: inline-block
+                    // border: 0
+                    // margin: 0
+                    // z-index: 10
+                    // position: fixed
+                    // background-color: $cmain
+                    // transform: translateX(calc(90vw - 80px))
+                    // top: 30px
+                    // outline: none
+                    // transition: transform 0.1s ease-in-out
+                    &:hover
 
-        .hamburger
-            // padding: 10px
-            // cursor: pointer
-            // display: inline-block
-            // border: 0
-            // margin: 0
-            // z-index: 10
-            // position: fixed
-            // background-color: $cmain
-            // transform: translateX(calc(90vw - 80px))
-            // top: 30px
-            // outline: none
-            // transition: transform 0.1s ease-in-out
-            &:hover
+                    .hamburgerBox
+                        // position: relative
+                        // width: 35px
+                        // height: 35px
+                        // display: inline-block
 
-            .hamburgerBox
-                // position: relative
-                // width: 35px
-                // height: 35px
-                // display: inline-block
+                        &:hover
+                            .hamburgerInner
+                                // background-color: white
 
-                &:hover
-                    .hamburgerInner
-                        // background-color: white
+                        .hamburgerInner
+                            // width: 100%
+                            // height: 5px
+                            // background-color: $cdark
+                            // position: absolute
+                            // left: 0
+                            // top: 50%
+                            // transform: translateY(-50%)
+                            // transition: background-color .1s .1s ease-in-out
 
-                .hamburgerInner
-                    // width: 100%
-                    // height: 5px
-                    // background-color: $cdark
-                    // position: absolute
-                    // left: 0
-                    // top: 50%
-                    // transform: translateY(-50%)
-                    // transition: background-color .1s .1s ease-in-out
+                        .hamburgerInner::before,
+                        .hamburgerInner::after
+                            // width: 100%
+                            // height: 5px
+                            // background-color: black
+                            // position: absolute
+                            // left: 0
+                            // content: ''
+                            // transition: transform .1s .1s ease-in-out
 
-                .hamburgerInner::before,
-                .hamburgerInner::after
-                    // width: 100%
-                    // height: 5px
-                    // background-color: black
-                    // position: absolute
-                    // left: 0
-                    // content: ''
-                    // transition: transform .1s .1s ease-in-out
+                        .hamburgerInner::before
+                            // top: -10px
 
-                .hamburgerInner::before
-                    // top: -10px
-
-                .hamburgerInner::after
-                    // top: 10px
+                        .hamburgerInner::after
+                            // top: 10px
 
     .hamburgerActive
         // transform: translateX(88.5vw) !important
@@ -498,6 +525,7 @@
         nav
             // height: 400px
             // display: flex
+            flex-direction: column
             // color: $cdark
             // justify-content: space-around
 
@@ -524,7 +552,7 @@
 
             .socialList
                 // display: flex
-                // flex-direction: column
+                flex-direction: row
                 justify-content: flex-start
                 width: 80%
                 padding: 0px
@@ -540,6 +568,8 @@
                     // border: none
                     // outline: none
                     margin-top: 30px
+                    margin-left: 10px
+                    margin-right: 10px
 
                     &:hover
                         // color: $chover
@@ -549,13 +579,14 @@
 
     .logo
         // position: absolute
-        // z-index: 5 !important
-        height: 30%
-        // bottom: 0
-        // left: calc(10% + 20px)
+        top: 400px
+        // left: 20px
+        // z-index: 3 !important
+        // height: 200px
+        // width: 300px
 
         img
-            // height: 60%
+            height: 40%
 
 @media(max-width: 600px)
     .headerComponent
@@ -567,81 +598,84 @@
         background-position: 150px 3px
         // display: flex
         // box-shadow: $smain
+        #headerContainer
+            width: 90%
+            #homeHamburger
+                width: calc(90% - 40px)
+                .homeButton
+                    // position: fixed
+                    // display: flex
+                    // width: 50px
+                    // height: 50px
+                    // background-color: $cmain
+                    // justify-content: center
+                    // align-items: center
+                    // left: calc(10vw + 20px)
+                    top: 35px
+                    // z-index: 15
 
-        .homeButton
-            // position: fixed
-            // display: flex
-            // width: 50px
-            // height: 50px
-            // background-color: $cmain
-            // justify-content: center
-            // align-items: center
-            // left: calc(10vw + 20px)
-            top: 35px
-            // z-index: 15
+                    i
+                        // text-decoration: none
+                        // color: $cdark
+                        // font-size: 40px
 
-            i
-                // text-decoration: none
-                // color: $cdark
-                // font-size: 40px
+                    &:hover
+                        i
+                            // color: $clight
 
-            &:hover
-                i
-                    // color: $clight
+                .hamburger
+                    // padding: 10px
+                    // cursor: pointer
+                    // display: inline-block
+                    // border: 0
+                    // margin: 0
+                    // z-index: 10
+                    // position: fixed
+                    // background-color: $cmain
+                    // transform: translateX(calc(90vw - 80px))
+                    // top: 30px
+                    // outline: none
+                    // transition: transform 0.1s ease-in-out
+                    &:hover
 
-        .hamburger
-            // padding: 10px
-            // cursor: pointer
-            // display: inline-block
-            // border: 0
-            // margin: 0
-            // z-index: 10
-            // position: fixed
-            // background-color: $cmain
-            transform: translateX(calc(90vw - 80px))
-            // top: 30px
-            // outline: none
-            // transition: transform 0.1s ease-in-out
-            &:hover
+                    .hamburgerBox
+                        // position: relative
+                        // width: 35px
+                        // height: 35px
+                        // display: inline-block
 
-            .hamburgerBox
-                // position: relative
-                // width: 35px
-                // height: 35px
-                // display: inline-block
+                        &:hover
+                            .hamburgerInner
+                                // background-color: white
 
-                &:hover
-                    .hamburgerInner
-                        // background-color: white
+                        .hamburgerInner
+                            // width: 100%
+                            // height: 5px
+                            // background-color: $cdark
+                            // position: absolute
+                            // left: 0
+                            // top: 50%
+                            // transform: translateY(-50%)
+                            // transition: background-color .1s .1s ease-in-out
 
-                .hamburgerInner
-                    // width: 100%
-                    // height: 5px
-                    // background-color: $cdark
-                    // position: absolute
-                    // left: 0
-                    // top: 50%
-                    // transform: translateY(-50%)
-                    // transition: background-color .1s .1s ease-in-out
+                        .hamburgerInner::before,
+                        .hamburgerInner::after
+                            // width: 100%
+                            // height: 5px
+                            // background-color: black
+                            // position: absolute
+                            // left: 0
+                            // content: ''
+                            // transition: transform .1s .1s ease-in-out
 
-                .hamburgerInner::before,
-                .hamburgerInner::after
-                    // width: 100%
-                    // height: 5px
-                    // background-color: black
-                    // position: absolute
-                    // left: 0
-                    // content: ''
-                    // transition: transform .1s .1s ease-in-out
+                        .hamburgerInner::before
+                            // top: -10px
 
-                .hamburgerInner::before
-                    // top: -10px
-
-                .hamburgerInner::after
-                    // top: 10px
+                        .hamburgerInner::after
+                            // top: 10px
 
     .hamburgerActive
-        transform: translateX(80.5vw) !important
+        // transform: translateX(80.5vw) !important
         // background-color: transparent !important
 
         .hamburgerInner
@@ -667,7 +701,7 @@
         // width: 50vw
         min-width: 100px
         // padding-top: 100px
-        // transform: translateX(100vw)
+        transform: translateX(600px)
         // transition: transform 0.2s ease-in-out
 
         nav
@@ -712,11 +746,14 @@
                     // color: $cdark
                     // font-size: 30px
                     // text-align: center
-                    // padding: 10px
+                    padding: 5px
                     // background-color: transparent
                     // cursor: pointer
                     // border: none
                     // outline: none
+                    margin-top: 30px
+                    margin-left: 10px
+                    margin-right: 0px
 
                     &:hover
                         // color: $chover
@@ -726,10 +763,11 @@
 
     .logo
         // position: absolute
-        // z-index: 5 !important
-        height: 20%
-        // bottom: 0
-        // left: calc(10% + 20px)
+        // top: 300px
+        // left: 20px
+        // z-index: 3 !important
+        // height: 200px
+        width: 150px
 
         img
-            // height: 60%
+            height: 30%

@@ -76,23 +76,27 @@ class Header extends React.Component {
     // }
 
     render() {
-
         return (
             <div className='headerComponent' >
-                <div onClick={() => this.handleClick(0)} className={this.state.hamburgerClass} onMouseEnter={this.handleHamburgerHover} onMouseLeave={this.handleHamburgerMouseLeave}>
-                    <span className="hamburgerBox">
-                        <span className={this.state.hamburgerClass === 'hamburger hamburgerDisabled hamburgerDisabledHover' ? 'hamburgerInnerHover' : 'hamburgerInner'}></span>
-                    </span>
-                </div>
-                <div className="logo">
-                    <img src={blackLogo} alt="" />
-                </div>
-                <div className='headerBackground'></div>
-                <NavLink to='/' exact>
-                    <div className="homeButton" onClick={() => window.scrollTo(0, 0)}>
-                        <i href="#" className="fa fa-home"></i>
+                <div id="headerContainer">
+                    <div id="homeHamburger">
+                        <NavLink to='/' exact>
+                            <div className="homeButton" onClick={() => window.scrollTo(0, 0)}>
+                                <i href="#" className="fa fa-home"></i>
+                            </div>
+                        </NavLink>
+                        <div onClick={() => this.handleClick(0)} className={this.state.hamburgerClass} onMouseEnter={this.handleHamburgerHover} onMouseLeave={this.handleHamburgerMouseLeave}>
+                            <span className="hamburgerBox">
+                                <span className={this.state.hamburgerClass === 'hamburger hamburgerDisabled hamburgerDisabledHover' ? 'hamburgerInnerHover' : 'hamburgerInner'}></span>
+                            </span>
+                        </div>
+
                     </div>
-                </NavLink>
+                    <div className="logo">
+                        <img src={blackLogo} alt="" />
+                    </div>
+                    <div className='headerBackground'></div>
+                </div>
                 <div ref={this.sidebar} className={this.state.hamburgerActive ? 'sidebar sidebarActive' : 'sidebar'}>
                     <nav className='navigation'>
                         <ul className='navList'>
@@ -113,7 +117,6 @@ class Header extends React.Component {
                     </nav>
                 </div>
             </div >
-
         );
     }
 }
